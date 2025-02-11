@@ -1,9 +1,8 @@
 // Create the 'basemap' tile layer that will be the background of our map.
 let basemap = L.tileLayer(
-  "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
-  {
-    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-  }
+ 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}
 );
 
 // Create the map object with center and zoom options.
@@ -17,7 +16,7 @@ basemap.addTo(map);
 
 // Function to determine marker size based on earthquake magnitude
 function markerSize(magnitude) {
-  return magnitude * 4;
+  return magnitude * 10;
 }
 
 // Function to determine marker color based on earthquake depth
